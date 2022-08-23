@@ -9,12 +9,13 @@ Things you may want to cover:
 ruby 3.0.1p64
 * System dependencies
 postgresql 12
-* Configuration
-
-* Database creation
 
 * Database initialization
-postgresql を起動
+<br>postgresql を起動
+
+railsの導入方法については以下参照<br>
+[[Rails] Windows10 で WSL を使って Rails 環境を構築したときのメモ
+](https://qiita.com/ksh-fthr/items/64a4e86c8bad08322c94)
 ```
 sudo /etc/init.d/postgresql start
 ```
