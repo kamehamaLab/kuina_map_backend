@@ -1,10 +1,10 @@
 class DetectionReptsController < ApplicationController
     def index
         repts = DetectionRept.all
-        render json: repts
+        render json: repts.to_json(:include => :device)
     end
     def show
-        render json: DetectionRept.find(params[:id])
+        render json: DetectionRept.find(params[:id]).to_json(:include => :device)
     end
     def create
         rept = DetectionRept.new(rept_params)
