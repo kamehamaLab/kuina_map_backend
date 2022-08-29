@@ -9,6 +9,7 @@ class DetectionReptsController < ApplicationController
     def create
         rept = DetectionRept.new(rept_params)
         if rept.save
+            ActionCable.server.broadcast('CabinetChannel',rept.to_json(:include => :device))
             render json: { status: 'success', data: rept }
         else
             render json: { status: 'error', data: rept }
