@@ -28,6 +28,6 @@ class DetectionReptsController < ApplicationController
 
     private
         def rept_params
-            params.require(:detection_repts).permit(:device_id, :x_coord, :y_coord)
+            params.require(:detection_rept).permit(:device_id, :x_coord, :y_coord)
         end
 end
